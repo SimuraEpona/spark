@@ -50,6 +50,7 @@ config :zone, ZoneWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/zone_web/(live|views)/.*(ex)$",
+      ~r"posts/*/.*(md)$",
       ~r"lib/zone_web/templates/.*(eex)$"
     ]
   ]
