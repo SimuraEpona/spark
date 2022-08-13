@@ -7,7 +7,7 @@
 </p>
 
 <p>
-  Tagged as <%= Enum.join(@post.tags, ", ") %>
+  <%= Enum.join(@post.tags, ", #") %>
 </p>
 
 <%= raw @post.body %>
