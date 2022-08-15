@@ -19,16 +19,17 @@ config :logger, level: :info
 # To get SSL working, you will need to add the `https` key
 # to the previous section and set your `:url` port to 443:
 #
-#     config :zone, ZoneWeb.Endpoint,
-#       ...,
-#       url: [host: "example.com", port: 443],
-#       https: [
-#         ...,
-#         port: 443,
-#         cipher_suite: :strong,
-#         keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
-#         certfile: System.get_env("SOME_APP_SSL_CERT_PATH")
-#       ]
+
+host = System.get_env("PHX_HOST") || "example.com"
+
+config :zone, ZoneWeb.Endpoint,
+  url: [host: host, port: 443],
+  force_ssl: [
+    host: nil,
+    rewrite_on: [:x_forwarded_port, :x_forwarded_proto],
+    hsts: true
+  ]
+
 #
 # The `cipher_suite` is set to `:strong` to support only the
 # latest and more secure SSL ciphers. This means old browsers
