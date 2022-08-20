@@ -4,4 +4,4 @@
   <time><%= @post.date %></time> · <%= Enum.join(@post.tags, ", ") %>
 </p>
 
-<%= raw @post.body %>
+<%= raw(@post.body) %>
