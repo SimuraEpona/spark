@@ -8,6 +8,7 @@ defmodule ZoneWeb.BlogController do
   end
 
   def show(conn, %{"id" => id}) do
-    render(conn, "show.html", post: Blog.get_post_by_id!(id))
+    post = Blog.get_post_by_id!(id)
+    render(conn, "show.html", post: post, page_title: post.title)
   end
 end
