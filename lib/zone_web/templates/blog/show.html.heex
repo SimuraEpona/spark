@@ -1,7 +1,7 @@
 <h1><%= @post.title %></h1>
 
 <p>
-  <time><%= @post.date %></time> · <%= Enum.join(@post.tags, ", ") %>
+  <time><%= @post.date %></time> · <ZoneWeb.Components.TagsComponent.tags tags={@post.tags} />
 </p>
 
 <%= raw(@post.body) %>

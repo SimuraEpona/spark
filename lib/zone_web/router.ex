@@ -20,6 +20,7 @@ defmodule ZoneWeb.Router do
     get "/", PageController, :index
     get "/blog", BlogController, :index
     get "/blog/:id", BlogController, :show
+    get "/tags/:id", TagsController, :show
   end
 
   # Other scopes may use custom stacks.
