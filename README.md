@@ -1,4 +1,4 @@
-# Zone
+# Spark
 
 To start your Phoenix server:
 

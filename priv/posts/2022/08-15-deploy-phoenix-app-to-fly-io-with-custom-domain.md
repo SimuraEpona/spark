@@ -86,7 +86,7 @@ in `config/prod.exs`, add these codes
 ```elixir
 host = System.get_env("PHX_HOST") || "example.com"
 
-config :zone, ZoneWeb.Endpoint,
+config :spark, SparkWeb.Endpoint,
  url: [host: host, port: 443],
  force_ssl: [
    host: nil,

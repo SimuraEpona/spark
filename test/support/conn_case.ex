@@ -1,4 +1,4 @@
-defmodule ZoneWeb.ConnCase do
+defmodule SparkWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule ZoneWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use ZoneWeb.ConnCase, async: true`, although
+  by setting `use SparkWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,12 +22,12 @@ defmodule ZoneWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import ZoneWeb.ConnCase
+      import SparkWeb.ConnCase
 
-      alias ZoneWeb.Router.Helpers, as: Routes
+      alias SparkWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint ZoneWeb.Endpoint
+      @endpoint SparkWeb.Endpoint
     end
   end
 
