@@ -8,10 +8,10 @@
 import Config
 
 # Configures the endpoint
-config :zone, ZoneWeb.Endpoint,
+config :spark, SparkWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: ZoneWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Zone.PubSub,
+  render_errors: [view: SparkWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Spark.PubSub,
   live_view: [signing_salt: "vEb3Gu6g"]
 
 # Configures the mailer
@@ -21,7 +21,7 @@ config :zone, ZoneWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :zone, Zone.Mailer, adapter: Swoosh.Adapters.Local
+config :spark, Spark.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false

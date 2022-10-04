@@ -1,9 +1,9 @@
-defmodule Zone.MixProject do
+defmodule Spark.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :zone,
+      app: :spark,
       version: "0.1.0",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule Zone.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Zone.Application, []},
+      mod: {Spark.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
